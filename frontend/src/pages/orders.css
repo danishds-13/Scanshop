@@ -1,0 +1,188 @@
+/* ===== Orders Page - Modern Enhanced UI ===== */
+.orders-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fafb, #e2e8f0);
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* ===== Page Header ===== */
+.orders-page h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Orders Grid ===== */
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* ===== Order Card ===== */
+.order-card {
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border-radius: 18px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Gradient accent bar */
+.order-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #fbbf24, #f59e0b, #22c55e);
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+/* ===== Card Details ===== */
+.order-card h4 {
+  color: #f59e0b;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.order-card p {
+  color: #475569;
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+.order-items {
+  margin-top: 15px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+}
+
+.order-items h5 {
+  color: #1e293b;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.order-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-items li {
+  padding: 6px 0;
+  color: #334155;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-total {
+  text-align: right;
+  color: #16a34a;
+  margin-top: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ===== QR Section ===== */
+.order-qr {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.order-qr img {
+  width: 150px;
+  height: 150px;
+  border-radius: 14px;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.order-qr img:hover {
+  transform: scale(1.08);
+}
+
+.qr-text {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+/* ===== Buttons Section ===== */
+.cancel-all-btn,
+.checkout-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.cancel-all-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(239, 68, 68, 0.3);
+}
+
+.cancel-all-btn:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  transform: scale(1.05);
+}
+
+.checkout-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(22, 163, 74, 0.3);
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  transform: scale(1.05);
+}
+
+/* ===== Empty Orders ===== */
+.empty-cart {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-top: 80px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .order-card {
+    padding: 20px;
+  }
+
+  .order-card h4 {
+    font-size: 1.05rem;
+  }
+
+  .orders-page h2 {
+    font-size: 1.6rem;
+  }
+}
